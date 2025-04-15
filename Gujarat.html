@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gujarat | Smart Tourism</title>
+  <style>
+    :root {
+      --primary-color: #FF5722;
+      --secondary-color: #00394f;
+      --accent-color: #FFC107;
+      --light-bg: #f4f4f4;
+      --dark-text: #222;
+      --card-radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--light-bg);
+      color: var(--dark-text);
+    }
+
+    .navbar {
+      background-color: var(--secondary-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .navdiv {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo a {
+      color: var(--light-bg);
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+    }
+
+    .navbar li {
+      margin-left: 2rem;
+    }
+
+    .navbar a {
+      color: var(--light-bg);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: var(--accent-color);
+    }
+
+    h1 {
+      text-align: center;
+      margin: 2rem 0 1rem;
+      color: var(--secondary-color);
+      font-size: 2.5rem;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: var(--card-radius);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      color: var(--secondary-color);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-description {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navdiv">
+      <div class="logo"><a href="home.html">SMART TOURISM</a></div>
+      <ul>
+        <li class="list"><a href="home.html">HOME</a></li>
+        <li class="list"><a href="about.html">ABOUT</a></li>
+        <li class="list"><a href="contactus.html">CONTACT US</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <h1>Top Places to Visit in Gujarat</h1>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Statue_of_Unity_2019.jpg" alt="Statue of Unity">
+      <div class="card-content">
+        <div class="card-title">Statue of Unity</div>
+        <div class="card-description">World’s tallest statue, dedicated to Sardar Vallabhbhai Patel, located near the Sardar Sarovar Dam.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Somnath_temple.jpg" alt="Somnath Temple">
+      <div class="card-content">
+        <div class="card-title">Somnath Temple</div>
+        <div class="card-description">One of the twelve Jyotirlinga shrines of Shiva, known for its spiritual significance and seaside location.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Rann_of_Kutch_White_Salt_Desert.jpg" alt="Rann of Kutch">
+      <div class="card-content">
+        <div class="card-title">Rann of Kutch</div>
+        <div class="card-description">A white salt desert known for the Rann Utsav, cultural performances, and camel rides under moonlight.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Gir_National_Park.jpg" alt="Gir National Park">
+      <div class="card-content">
+        <div class="card-title">Gir National Park</div>
+        <div class="card-description">Home to the majestic Asiatic lions, this park offers thrilling wildlife safaris and diverse flora and fauna.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Saputara_hill_station.jpg" alt="Saputara">
+      <div class="card-content">
+        <div class="card-title">Saputara</div>
+        <div class="card-description">The only hill station in Gujarat, perfect for nature lovers and trekkers looking for a cool retreat.</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
