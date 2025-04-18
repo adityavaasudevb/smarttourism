@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Smart Tourism</title>
+  <style>
+    :root {
+      --primary-color: #FF5722;
+      --secondary-color: #00394f;
+      --accent-color: #FFC107;
+      --light-bg: #f4f4f4;
+      --dark-text: #222;
+      --card-radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--light-bg);
+      color: var(--dark-text);
+      /* flex: 1; */
+    }
+
+    .navbar {
+      background-color: var(--secondary-color);
+      padding: 1rem 5%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo a {
+      color: white;
+      font-size: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+    }
+
+    .navbar li {
+      margin-left: 2rem;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: var(--accent-color);
+    }
+
+    .contact-info-section {
+      max-width: 700px;
+      margin: 4rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: var(--card-radius);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-info-section h1 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .contact-info-section p {
+      font-size: 1.1rem;
+      margin: 0.8rem 0;
+      color: #444;
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-info-section p span {
+      margin-right: 8px;
+      font-size: 1.3rem;
+    }
+
+    .socials {
+      margin-top: 1.5rem;
+    }
+
+    .socials p {
+      margin: 0.3rem 0;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    footer {
+      margin-top: auto; /* Push footer to bottom if content is short */
+      padding: 2rem;
+      background-color: var(--secondary-color);
+      text-align: center;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo"><a href="home.html">SMART TOURISM</a></div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="contact-info-section">
+    <h1>Contact Us</h1>
+    <p><span>📞</span> <strong>Phone:</strong> +91 98765 43210</p>
+    <p><span>📧</span> <strong>Email:</strong> support@smarttravels.com</p>
+    <p><span>🌐</span> <strong>Website:</strong> www.smarttravels.com</p>
+
+    <div class="socials">
+      <p><span>📱</span><strong>Follow Us:</strong></p>
+      <p>🔹 Instagram: <strong>@smart_travels</strong></p>
+      <p>🔹 Facebook: <strong>Smart Travels</strong></p>
+      <p>🔹 Twitter: <strong>@smart_travels_trv</strong></p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Smart Tourism. All rights reserved.
+  </footer>
+
+</body>
+</html>
