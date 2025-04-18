@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Andhra Pradesh | Smart Tourism</title>
+  <link rel="stylesheet" href="state_style.css" type="text/css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navdiv">
+      <div class="logo"><a href="C:/my/SRP project/home.html">SMART TOURISM</a></div>
+      <ul>
+        <li class="list"><a href="C:/my/SRP project/home.html">HOME</a></li>
+        <li class="list"><a href="C:/my/SRP project/about.html">ABOUT</a></li>
+        <li class="list"><a href="C:/my/SRP project/contactus.html">CONTACT US</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  
+</div>
+
+<!-- Weather Widget -->
+<div class="weather-widget">
+  <h3>Weather in Andhra Pradesh</h3>
+  <p id="weather-desc">Loading...</p>
+  <p><strong>Temperature:</strong> <span id="temp"></span>°C</p>
+  <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+  <p><strong>Wind:</strong> <span id="wind"></span> km/h</p>
+</div>
+  <h1>Top Places to Visit in Andhra Pradesh</h1>
+  
+  <div class="card-container">
+    <!-- Your existing card content here... -->
+    <div class="card-container">
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.oSoSoCgKXSvLr3akURLi6QHaFj?w=252&h=189&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Tirupati Temple">
+        <div class="card-content">
+          <div class="card-title">Tirupati</div>
+          <div class="card-description">Famous pilgrimage city home to the revered Sri Venkateswara Temple atop the Tirumala hills.</div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.DZbPpD2UYhwEyfQUa3NbUQHaE7?w=268&h=180&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Undavalli Caves">
+        <div class="card-content">
+          <div class="card-title">Undavalli Caves</div>
+          <div class="card-description">Ancient rock-cut cave temples near Vijayawada showcasing stunning monolithic architecture.</div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.84sOaO7A1foC2MaekTlfcwHaDt?w=336&h=175&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="RK Beach Vizag">
+        <div class="card-content">
+          <div class="card-title">RK Beach, Visakhapatnam</div>
+          <div class="card-description">Popular beach in Vizag known for its scenic views, serene atmosphere, and Submarine Museum.</div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <img src="https://pickyourtrail.com/blog/wp-content/uploads/2020/09/Araku_valley_view.jpg" alt="Araku Valley">
+        <div class="card-content">
+          <div class="card-title">Araku Valley</div>
+          <div class="card-description">Picturesque hill station in Eastern Ghats famous for coffee plantations and tribal culture.</div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.t2qkIwwY6bXjrOgmTHjNZAHaEj?w=278&h=180&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Kailasagiri">
+        <div class="card-content">
+          <div class="card-title">Kailasagiri</div>
+          <div class="card-description">Hilltop park in Visakhapatnam with panoramic views, ropeway, and giant Shiva-Parvati statues.</div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.efTGXVbVXUuHIJPq8kr4MQHaEK?w=333&h=187&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Gandikota Fort">
+        <div class="card-content">
+          <div class="card-title">Gandikota</div>
+          <div class="card-description">Known as the 'Grand Canyon of India', Gandikota features a fort and a stunning gorge on Pennar River.</div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.milqkEe2_76MKYpushErNAHaFd?w=275&h=180&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Amaravati Stupa">
+        <div class="card-content">
+          <div class="card-title">Amaravati Stupa</div>
+          <div class="card-description">An ancient Buddhist site with a large stupa dating back to the 3rd century BCE.</div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.swJTk8yAXPqJGxNKPIoDPQHaE_?w=257&h=180&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Borra Caves">
+        <div class="card-content">
+          <div class="card-title">Borra Caves</div>
+          <div class="card-description">Spectacular limestone caves in the Ananthagiri Hills, known for stalactites and stalagmites formations.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for weather widget
+    function fetchWeather(city) {
+      const apiKey = "d2c727838b937c17a420d65508953d61";  // Replace with your OpenWeatherMap API key
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById("weather-desc").innerText = data.weather[0].description;
+          document.getElementById("temp").innerText = Math.round(data.main.temp);
+          document.getElementById("humidity").innerText = data.main.humidity;
+          document.getElementById("wind").innerText = data.wind.speed;
+        })
+        .catch(err => {
+          document.getElementById("weather-desc").innerText = "Unable to load weather data.";
+          console.error(err);
+        });
+    }
+
+    // Fetch weather for Visakhapatnam (Andhra Pradesh)
+    fetchWeather('Visakhapatnam');
+  </script>
+
+</body>
+</html>
+
+
+

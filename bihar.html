@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bihar | Smart Tourism</title>
+  <link rel="stylesheet" href="state_style.css" type="text/css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navdiv">
+      <div class="logo"><a href="C:/my/SRP project/home.html">SMART TOURISM</a></div>
+      <ul>
+        <li class="list"><a href="C:/my/SRP project/home.html">HOME</a></li>
+        <li class="list"><a href="C:/my/SRP project/about.html">ABOUT</a></li>
+        <li class="list"><a href="C:/my/SRP project/contactus.html">CONTACT US</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    // JavaScript for weather widget
+    function fetchWeather(city) {
+      const apiKey = "d2c727838b937c17a420d65508953d61";  // Replace with your OpenWeatherMap API key
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById("weather-desc").innerText = data.weather[0].description;
+          document.getElementById("temp").innerText = Math.round(data.main.temp);
+          document.getElementById("humidity").innerText = data.main.humidity;
+          document.getElementById("wind").innerText = data.wind.speed;
+        })
+        .catch(err => {
+          document.getElementById("weather-desc").innerText = "Unable to load weather data.";
+          console.error(err);
+        });
+    }
+    
+    fetchWeather('Patna');
+
+    </script>
+    <div class="weather-widget">
+      <h3>Weather in Bihar</h3>
+      <p id="weather-desc">Loading...</p>
+      <p><strong>Temperature:</strong> <span id="temp"></span>°C</p>
+      <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+      <p><strong>Wind:</strong> <span id="wind"></span> km/h</p>
+    </div>
+  <h1>Top Places to Visit in Bihar</h1>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="https://media.istockphoto.com/id/923634730/photo/the-side-view-of-the-stupa-at-mahabodhi-temple-complex-in-bodh-gaya-india-the-mahabodhi-vihar.jpg?s=612x612&w=0&k=20&c=IbaYAayHYmoqshQUoXM5HVbMzos6glaj-kjvWQQvWZQ=" alt="Mahabodhi Temple">
+      <div class="card-content">
+        <div class="card-title">Mahabodhi Temple</div>
+        <div class="card-description">UNESCO World Heritage Site in Bodh Gaya where Lord Buddha attained enlightenment.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.PU2tBIkAuP-GLSUZF8f2cgHaFj?w=241&h=181&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Nalanda University">
+      <div class="card-content">
+        <div class="card-title">Nalanda University</div>
+        <div class="card-description">Ancient learning center and one of the world’s oldest universities.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.0yEnCMRPTYpzLxGYSi2ZAgHaEt?w=302&h=192&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Vishwa Shanti Stupa">
+      <div class="card-content">
+        <div class="card-title">Vishwa Shanti Stupa</div>
+        <div class="card-description">Peace Pagoda in Rajgir on a scenic hilltop, symbolizing world peace.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.vXWkW3wN23YKm4CbGJjSlgHaFR?w=290&h=206&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Golghar Patna">
+      <div class="card-content">
+        <div class="card-title">Golghar</div>
+        <div class="card-description">Historic granary in Patna with a panoramic view of the city and river Ganges.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.rEXRL0aCmMu9WaThcwrv9AHaFB?w=228&h=180&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Vikramshila University">
+      <div class="card-content">
+        <div class="card-title">Vikramshila University</div>
+        <div class="card-description">Ancient university established in the 8th century by King Dharmapala.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.7BCl46TufJslSMTo6PHThgHaFj?w=247&h=186&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Barabar Caves">
+      <div class="card-content">
+        <div class="card-title">Barabar Caves</div>
+        <div class="card-description">Oldest surviving rock-cut caves in India dating back to the Mauryan Empire.</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

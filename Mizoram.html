@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mizoram | Smart Tourism</title>
+  <link rel="stylesheet" href="state_style.css" type="text/css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navdiv">
+      <div class="logo"><a href="C:/my/SRP project/home.html">SMART TOURISM</a></div>
+      <ul>
+        <li class="list"><a href="C:/my/SRP project/home.html">HOME</a></li>
+        <li class="list"><a href="C:/my/SRP project/about.html">ABOUT</a></li>
+        <li class="list"><a href="C:/my/SRP project/contactus.html">CONTACT US</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    // JavaScript for weather widget
+    function fetchWeather(city) {
+      const apiKey = "d2c727838b937c17a420d65508953d61";  // Replace with your OpenWeatherMap API key
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById("weather-desc").innerText = data.weather[0].description;
+          document.getElementById("temp").innerText = Math.round(data.main.temp);
+          document.getElementById("humidity").innerText = data.main.humidity;
+          document.getElementById("wind").innerText = data.wind.speed;
+        })
+        .catch(err => {
+          document.getElementById("weather-desc").innerText = "Unable to load weather data.";
+          console.error(err);
+        });
+    }
+    
+    fetchWeather('Aizawl');
+
+    </script>
+    <div class="weather-widget">
+      <h3>Weather in Mizoram</h3>
+      <p id="weather-desc">Loading...</p>
+      <p><strong>Temperature:</strong> <span id="temp"></span>°C</p>
+      <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+      <p><strong>Wind:</strong> <span id="wind"></span> km/h</p>
+    </div>
+  <h1>Top Places to Visit in Mizoram</h1>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.h2-2P77CqXnjoFQdMwK6RwHaFj?rs=1&pid=ImgDetMain" alt="Aizawl">
+      <div class="card-content">
+        <div class="card-title">Aizawl</div>
+        <div class="card-description">The picturesque capital city offering panoramic views, vibrant culture, and local markets.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OLC.FrNqA4Zm6hiQqQ480x360?w=249&h=140&c=8&rs=1&qlt=90&r=0&o=6&dpr=1.3&pid=3.1&rm=2" alt="Vantawng Falls">
+      <div class="card-content">
+        <div class="card-title">Vantawng Falls</div>
+        <div class="card-description">Mizoram's highest waterfall cascading amidst dense forests near Thenzawl.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.dzKY4_hoZy-uaRtoRNvuBgHaDt?w=258&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Reiek">
+      <div class="card-content">
+        <div class="card-title">Reiek</div>
+        <div class="card-description">A scenic mountain village offering views of the Mizo Hills and cultural experiences.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.Zku1YmT2tAqGcVyY-an35gHaDt?w=305&h=175&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Tam Dil Lake">
+      <div class="card-content">
+        <div class="card-title">Tam Dil Lake</div>
+        <div class="card-description">A serene natural lake near Aizawl, perfect for boating and surrounded by forests.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://static.wixstatic.com/media/b81d60_b217ba21be524061b548e508529ed331~mv2.jpg/v1/fill/w_868,h_454,al_c,q_85,enc_avif,quality_auto/b81d60_b217ba21be524061b548e508529ed331~mv2.jpg" alt="Murlen National Park">
+      <div class="card-content">
+        <div class="card-title">Murlen National Park</div>
+        <div class="card-description">Rich biodiversity hotspot with semi-evergreen forests and rare wildlife species.</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

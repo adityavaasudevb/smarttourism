@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Telangana | Smart Tourism</title>
+  <link rel="stylesheet" href="state_style.css" type="text/css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navdiv">
+      <div class="logo"><a href="C:/my/SRP project/home.html">SMART TOURISM</a></div>
+      <ul>
+        <li class="list"><a href="C:/my/SRP project/home.html">HOME</a></li>
+        <li class="list"><a href="C:/my/SRP project/about.html">ABOUT</a></li>
+        <li class="list"><a href="C:/my/SRP project/contactus.html">CONTACT US</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="weather-widget">
+    <h3>Weather in Telangana</h3>
+    <p id="weather-desc">Loading...</p>
+    <p><strong>Temperature:</strong> <span id="temp"></span>°C</p>
+    <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+    <p><strong>Wind:</strong> <span id="wind"></span> km/h</p>
+  </div>
+
+  <h1>Top Places to Visit in Telangana</h1>
+  <div class="card-container">
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.RnDnznSmxI_W51J0d-pgDgHaFj?w=259&h=194&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Charminar">
+      <div class="card-content">
+        <div class="card-title">Charminar</div>
+        <div class="card-description">Iconic 16th-century mosque with four grand arches and minarets at the heart of Hyderabad.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.yN-L3YC4NuS27ot8SWi0cAHaEJ?w=330&h=185&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Golconda Fort">
+      <div class="card-content">
+        <div class="card-title">Golconda Fort</div>
+        <div class="card-description">Historic fortress known for its acoustics, scenic views, and legacy of the Qutb Shahi dynasty.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.xcx0pZfBgOpWSFbW9a6x2QHaDt?w=301&h=180&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Ramoji Film City">
+      <div class="card-content">
+        <div class="card-title">Ramoji Film City</div>
+        <div class="card-description">World's largest film studio complex with tours, attractions, and entertainment.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.Nnauo1YppfOLVaRMmYURPgHaDk?w=294&h=168&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Hussain Sagar Lake">
+      <div class="card-content">
+        <div class="card-title">Hussain Sagar Lake</div>
+        <div class="card-description">Man-made lake with a giant Buddha statue, popular for boating and evening strolls.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.0IEvrHuh6wkYlboDD7jsSQHaFY?w=286&h=208&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Chowmahalla Palace">
+      <div class="card-content">
+        <div class="card-title">Chowmahalla Palace</div>
+        <div class="card-description">18th-century palace complex showcasing the royal grandeur of the Nizams.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.XO3QeZxMinUcA2y2Aj_JvAHaE6?w=244&h=180&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Salar Jung Museum">
+      <div class="card-content">
+        <div class="card-title">Salar Jung Museum</div>
+        <div class="card-description">Vast museum with rare collections of art, antiques, and historic manuscripts.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.KOB90aivM36Ez_f1lssZsQHaE8?w=290&h=193&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Warangal Fort">
+      <div class="card-content">
+        <div class="card-title">Warangal Fort</div>
+        <div class="card-description">Ruins of a grand Kakatiya fort with iconic stone gateways and ancient carvings.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.4fho3rXBQJQUfipFWRMaEAHaHa?w=187&h=187&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Kuntala Waterfall">
+      <div class="card-content">
+        <div class="card-title">Kuntala Waterfall</div>
+        <div class="card-description">Telangana's tallest waterfall surrounded by forested landscapes and nature trails.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Weather Widget -->
+
+  <div class="card-container">
+    <!-- Your existing card content here... -->
+  </div>
+
+  <script>
+    // JavaScript for weather widget
+    function fetchWeather(city) {
+      const apiKey = "d2c727838b937c17a420d65508953d61";  // Replace with your OpenWeatherMap API key
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById("weather-desc").innerText = data.weather[0].description;
+          document.getElementById("temp").innerText = Math.round(data.main.temp);
+          document.getElementById("humidity").innerText = data.main.humidity;
+          document.getElementById("wind").innerText = data.wind.speed;
+        })
+        .catch(err => {
+          document.getElementById("weather-desc").innerText = "Unable to load weather data.";
+          console.error(err);
+        });
+    }
+
+    fetchWeather('Hyderabad');
+  </script>
+</body>
+</html>
+
