@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Madhya Pradesh | Smart Tourism</title>
+  <style>
+    :root {
+      --primary-color: #FF5722;
+      --secondary-color: #00394f;
+      --accent-color: #FFC107;
+      --light-bg: #f4f4f4;
+      --dark-text: #222;
+      --card-radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--light-bg);
+      color: var(--dark-text);
+    }
+
+    .navbar {
+      background-color: var(--secondary-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .navdiv {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo a {
+      color: var(--light-bg);
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+    }
+
+    .navbar li {
+      margin-left: 2rem;
+    }
+
+    .navbar a {
+      color: var(--light-bg);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: var(--accent-color);
+    }
+
+    h1 {
+      text-align: center;
+      margin: 2rem 0 1rem;
+      color: var(--secondary-color);
+      font-size: 2.5rem;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: var(--card-radius);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      color: var(--secondary-color);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-description {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navdiv">
+      <div class="logo"><a href="home.html">SMART TOURISM</a></div>
+      <ul>
+        <li class="list"><a href="home.html">HOME</a></li>
+        <li class="list"><a href="about.html">ABOUT</a></li>
+        <li class="list"><a href="contactus.html">CONTACT US</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <h1>Top Places to Visit in Madhya Pradesh</h1>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Khajuraho_Temple_Complex.jpg" alt="Khajuraho Temples">
+      <div class="card-content">
+        <div class="card-title">Khajuraho Temples</div>
+        <div class="card-description">World-famous UNESCO site known for stunning sculptures and intricate erotic carvings.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Bhedaghat_Dhuandhar_waterfalls.jpg" alt="Dhuandhar Falls">
+      <div class="card-content">
+        <div class="card-title">Dhuandhar Falls</div>
+        <div class="card-description">Spectacular waterfall in Bhedaghat with smoky mist and marble rock gorges.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Bandhavgarh_National_Park.jpg" alt="Bandhavgarh National Park">
+      <div class="card-content">
+        <div class="card-title">Bandhavgarh National Park</div>
+        <div class="card-description">Famous tiger reserve and one of the best places in India to spot a Royal Bengal Tiger.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Sanchi_Stupa_1.jpg" alt="Sanchi Stupa">
+      <div class="card-content">
+        <div class="card-title">Sanchi Stupa</div>
+        <div class="card-description">Ancient Buddhist monument and UNESCO World Heritage site dating back to 3rd century BCE.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Gwalior_Fort.jpg" alt="Gwalior Fort">
+      <div class="card-content">
+        <div class="card-title">Gwalior Fort</div>
+        <div class="card-description">Majestic hilltop fort with palaces, temples, and panoramic views of Gwalior city.</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
